@@ -1,0 +1,4 @@
+version: 1
+start:
+  command: ["python", "main.py"]
+  # No port needed - MCP servers use stdio transport
