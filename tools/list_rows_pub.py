@@ -2,7 +2,7 @@ from __future__ import annotations
 import json
 from typing import Optional
 from mcp.server.fastmcp import FastMCP
-from lib.http_utils import fetch_published_csv, fetch_published_csv_from_url, parse_sheets_url
+from lib.http_utils import fetch_published_csv, fetch_published_csv_from_url
 from lib.csv_utils import records_from_csv
 from lib.data_processing import page
 
@@ -22,8 +22,8 @@ def register_tool(mcp: FastMCP):
         """List rows from a *published* Google Sheet tab (no auth). 
         
         Args:
-            sheets_url: Full Google Sheets URL (preferred method)
-            pub_id: The published sheet ID (2PACX... from 'Publish to web') - deprecated, use sheets_url instead
+            sheets_url: Full published Google Sheets CSV URL (e.g., https://docs.google.com/.../pub?gid=123&single=true&output=csv)
+            pub_id: The published sheet ID (2PACX... from 'Publish to web') - for backward compatibility
             gid: The sheet tab ID (default: "0") - only used with pub_id
             header_row: Row number containing headers (default: 1)
             limit: Maximum number of rows to return (default: 100)

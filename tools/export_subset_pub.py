@@ -24,8 +24,8 @@ def register_tool(mcp: FastMCP):
         """Export a filtered/select subset from a *published* sheet tab as CSV or JSON (returned inline).
         
         Args:
-            sheets_url: Full Google Sheets URL (preferred method)
-            pub_id: The published sheet ID (2PACX... from 'Publish to web') - deprecated, use sheets_url instead
+            sheets_url: Full published Google Sheets CSV URL (e.g., https://docs.google.com/.../pub?gid=123&single=true&output=csv)
+            pub_id: The published sheet ID (2PACX... from 'Publish to web') - for backward compatibility
             gid: The sheet tab ID (default: "0") - only used with pub_id
             filters: List of filter conditions to apply
             select: List of column names to include in output
