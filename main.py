@@ -4,8 +4,8 @@ from mcp.server.fastmcp import FastMCP
 from tools.gsheets import register_tools
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger("gsheets-zeroauth")
-mcp = FastMCP("gsheets-zeroauth")
+log = logging.getLogger("gsheets")
+mcp = FastMCP("gsheets")
 
 register_tools(mcp)
 
